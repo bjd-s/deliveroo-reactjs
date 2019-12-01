@@ -50,7 +50,11 @@ const ModalCard = props => {
 					</div>
 				) : null}
 
-				<p>{props.description}</p>
+				{props.description ? (
+					<p>{props.description}</p>
+				) : (
+					<p>La description du produit est à venir !</p>
+				)}
 
 				<div className="modal-item--buttons-container">
 					<button onClick={props.handleModal}>Annuler</button>
