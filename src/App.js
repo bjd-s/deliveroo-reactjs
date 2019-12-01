@@ -14,12 +14,13 @@ const App = () => {
 	const [restaurant, setRestaurant] = useState({})
 	const [menu, setMenu] = useState({})
 	const [cart, setCart] = useState([])
-	const [isEmpty, setIsEmpty] = useState(false)
+	const [isEmpty, setIsEmpty] = useState(true)
 	const [showModal, setShowModal] = useState(false)
 	const [modal, setModal] = useState([])
+	const [counter, setCounter] = useState(1)
 
 	const handleDiv = () => {
-		setIsEmpty(true)
+		setIsEmpty(false)
 		setShowModal(false)
 	}
 	const handleModal = () => {
@@ -65,7 +66,14 @@ const App = () => {
 							)
 						})}
 					</div>
-					<Cart cart={cart} handleDiv={handleDiv} isEmpty={isEmpty} />
+					<Cart
+						cart={cart}
+						handleDiv={handleDiv}
+						isEmpty={isEmpty}
+						setIsEmpty={setIsEmpty}
+						counter={counter}
+						setCounter={setCounter}
+					/>
 				</div>
 			</div>
 
@@ -78,6 +86,8 @@ const App = () => {
 					handleDiv={handleDiv}
 					handleModal={handleModal}
 					setModal={setModal}
+					setIsEmpty={setIsEmpty}
+					isEmpty={isEmpty}
 				/>
 			)}
 		</>
