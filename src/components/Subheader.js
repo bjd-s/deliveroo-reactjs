@@ -1,5 +1,4 @@
-import React from "react";
-import headerImg from "../img/header-image.jpg";
+import React from "react"
 
 const Subheader = props => {
 	return (
@@ -8,9 +7,9 @@ const Subheader = props => {
 				<h1>{props.title}</h1>
 				<p>{props.text}</p>
 			</div>
-			<img src={headerImg} alt="Nourriture" />
+			<img src={props.picture} alt="Nourriture" />
 		</div>
-	);
-};
+	)
+}
 
-export default Subheader;
+export default Subheader

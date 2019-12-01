@@ -42,7 +42,11 @@ const App = () => {
 		<>
 			<Header />
 
-			<Subheader title={restaurant.name} text={restaurant.description} />
+			<Subheader
+				title={restaurant.name}
+				text={restaurant.description}
+				picture={restaurant.picture}
+			/>
 
 			<div className="content">
 				<div className="main">
